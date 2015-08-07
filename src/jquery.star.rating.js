@@ -2,7 +2,7 @@
  * jQuery Star Rating plugin
  * Joost van Velzen - http://joost.in
  *
- * v 1.0
+ * v 1.0.1
  *
  * cc - attribution + share alike
  * http://creativecommons.org/licenses/by-sa/4.0/
@@ -35,13 +35,13 @@
 
 	$.fn.setRating = function(numRating) {
 		var obj = this;
-		$('#'+this.settings.fieldId).val(numRating);
+		$('#'+obj.settings.fieldId).val(numRating);
 		obj.showRating(numRating, true);
 	};
 
 	$.fn.showRating = function(numRating, force) {
 		var obj = this;
-		if($('#'+this.settings.fieldId).val() == '' || force)
+		if($('#'+obj.settings.fieldId).val() == '' || force)
 		{
 			$(obj).find('i').each(function(){
 				if($(this).data('rating') <= numRating)
