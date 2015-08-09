@@ -1,7 +1,7 @@
 # jquery-star-rating-plugin
 Rating plugin jQuery
 
-A simple star rating plugin.
+A simple star rating plugin which uses Googles Materialize Icons.
 
 # Demo
 
