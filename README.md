@@ -5,9 +5,8 @@ A simple star rating plugin.
 
 # Requirements
 
-- Access to Google Materialize icons (http://www.google.com/design/icons/). Without, stars will show up as text.
-- jQuery (duh)
-- A webbrowser
+- jQuery
+- Access to Google Materialize icons (http://www.google.com/design/icons/). See the example HTML file.
 
 # Usage
 
@@ -17,17 +16,13 @@ Add the plugin to your source, call it by using:
 
 # Options
 
-    min : 1
-
-Start counting here, you probably won't need to change this
-
     max : 5
 
-How many stars you want (starting from the min option)
+How many stars you want / max rating.
 
     fieldName : 'rating'
 
-Specific name for the hidden input field
+Specific name for the hidden input field.
 
     fieldId : 'rating'
 

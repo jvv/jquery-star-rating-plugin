@@ -2,7 +2,7 @@
  * jQuery Star Rating plugin
  * Joost van Velzen - http://joost.in
  *
- * v 1.0.1
+ * v 1.0.2
  *
  * cc - attribution + share alike
  * http://creativecommons.org/licenses/by-sa/4.0/
@@ -11,24 +11,29 @@
 (function( $ ) {
 	$.fn.addRating = function(options) {
 		var obj = this;
-		// set default settings
 		var settings = $.extend({
-			min : 1,
 			max : 5,
+			half : true,
 			fieldName : 'rating',
 			fieldId : 'rating'
+
 		}, options );
 		this.settings = settings;
 
-		for(var i = settings.min ; i <= settings.max ; i++)
+		// create the stars
+		for(var i = 1 ; i <= settings.max ; i++)
 		{
-			var star = $('<i/>').addClass('material-icons').html('star_border').data('rating', i).appendTo(this).click(function(){
-				obj.setRating($(this).data('rating'));
-			}).hover(function(){
-				obj.showRating($(this).data('rating'), false);
-			}, function(){
-				obj.showRating(0,false);
-			});
+			var star = $('<i/>').addClass('material-icons').html('star_border').data('rating', i).appendTo(this).click(
+				function(){
+					obj.setRating($(this).data('rating'));
+				}
+			).hover(
+				function(e){
+					obj.showRating($(this).data('rating'), false);
+				}, function(){
+					obj.showRating(0,false);
+				}
+			);
 		}
 		$(this).append('<input type="hidden" name="'+settings.fieldName+'" id="'+settings.fieldId+'" />');
 	};
@@ -44,14 +49,12 @@
 		if($('#'+obj.settings.fieldId).val() == '' || force)
 		{
 			$(obj).find('i').each(function(){
+				var icon = 'star_border';
 				if($(this).data('rating') <= numRating)
 				{
-					$(this).html('star');
+					icon = 'star';
 				}
-				else
-				{
-					$(this).html('star_border');
-				}
+				$(this).html(icon);
 			})
 		}
 	}
