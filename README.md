@@ -3,6 +3,10 @@ Rating plugin jQuery
 
 A simple star rating plugin.
 
+# Demo
+
+A demo can be seen on: http://joost.in/ternet/javascript/jquery-star-rating-plugin, or in the example HTML file.
+
 # Requirements
 
 - jQuery
