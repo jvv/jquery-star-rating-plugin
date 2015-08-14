@@ -2,7 +2,7 @@
  * jQuery Star Rating plugin
  * Joost van Velzen - http://joost.in
  *
- * v 1.0.2
+ * v 1.0.3
  *
  * cc - attribution + share alike
  * http://creativecommons.org/licenses/by-sa/4.0/
@@ -15,7 +15,8 @@
 			max : 5,
 			half : true,
 			fieldName : 'rating',
-			fieldId : 'rating'
+			fieldId : 'rating',
+			icon : 'star'
 
 		}, options );
 		this.settings = settings;
@@ -23,7 +24,7 @@
 		// create the stars
 		for(var i = 1 ; i <= settings.max ; i++)
 		{
-			var star = $('<i/>').addClass('material-icons').html('star_border').data('rating', i).appendTo(this).click(
+			var star = $('<i/>').addClass('material-icons').html(this.settings.icon+'_border').data('rating', i).appendTo(this).click(
 				function(){
 					obj.setRating($(this).data('rating'));
 				}
@@ -49,10 +50,10 @@
 		if($('#'+obj.settings.fieldId).val() == '' || force)
 		{
 			$(obj).find('i').each(function(){
-				var icon = 'star_border';
+				var icon = obj.settings.icon+'_border';
 				if($(this).data('rating') <= numRating)
 				{
-					icon = 'star';
+					icon = obj.settings.icon;
 				}
 				$(this).html(icon);
 			})
