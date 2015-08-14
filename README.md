@@ -21,7 +21,7 @@ Add the plugin to your source, call it by using:
 # Options
 
     icon : star | favorite
-    
+
 Star is a star, favorite is a heart
 
     max : 5
