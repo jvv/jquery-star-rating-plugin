@@ -36,6 +36,14 @@ Specific name for the hidden input field.
 
 ID attribute of the hidden input field, so you can retrieve the contents easily.
 
+    borderColor : 'black'
+
+The default border color of the icon.
+
+    fillColor : 5
+
+The default fill color of the icon.
+
 # License
 
 Creative Commons  / Free to use or alter - leave the
