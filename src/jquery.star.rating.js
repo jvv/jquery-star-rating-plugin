@@ -16,7 +16,9 @@
 			half : true,
 			fieldName : 'rating',
 			fieldId : 'rating',
-			icon : 'star'
+			icon : 'star',
+			borderColor: 'black',
+			fillColor: 'black'
 
 		}, options );
 		this.settings = settings;
@@ -51,9 +53,12 @@
 		{
 			$(obj).find('i').each(function(){
 				var icon = obj.settings.icon+'_border';
+				$(this).css('color', obj.settings.borderColor);
+
 				if($(this).data('rating') <= numRating)
 				{
 					icon = obj.settings.icon;
+					$(this).css('color', obj.settings.fillColor);
 				}
 				$(this).html(icon);
 			})
