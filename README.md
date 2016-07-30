@@ -40,7 +40,7 @@ ID attribute of the hidden input field, so you can retrieve the contents easily.
 
 The default border color of the icon.
 
-    fillColor : 5
+    fillColor : 'black'
 
 The default fill color of the icon.
 
