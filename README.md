@@ -36,6 +36,10 @@ Specific name for the hidden input field.
 
 ID attribute of the hidden input field, so you can retrieve the contents easily.
 
+# Override Styles
+
+Change the fill color by overriding the "selected" class in your css.
+
 # License
 
 Creative Commons  / Free to use or alter - leave the
