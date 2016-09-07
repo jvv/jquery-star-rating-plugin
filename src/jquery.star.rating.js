@@ -17,7 +17,6 @@
 			fieldName : 'rating',
 			fieldId : 'rating',
 			icon : 'star'
-
 		}, options );
 		this.settings = settings;
 
@@ -51,9 +50,12 @@
 		{
 			$(obj).find('i').each(function(){
 				var icon = obj.settings.icon+'_border';
+				$(this).removeClass('selected');
+
 				if($(this).data('rating') <= numRating)
 				{
 					icon = obj.settings.icon;
+					$(this).addClass('selected');
 				}
 				$(this).html(icon);
 			})
