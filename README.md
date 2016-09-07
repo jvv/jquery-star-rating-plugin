@@ -36,13 +36,9 @@ Specific name for the hidden input field.
 
 ID attribute of the hidden input field, so you can retrieve the contents easily.
 
-    borderColor : 'black'
+# Override Styles
 
-The default border color of the icon.
-
-    fillColor : 'black'
-
-The default fill color of the icon.
+Change the fill color by overriding the "selected" class in your css.
 
 # License
 
