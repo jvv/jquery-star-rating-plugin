@@ -12,6 +12,7 @@
 	$.fn.addRating = function(options) {
 		var obj = this;
 		var settings = $.extend({
+			click : function(obj,click) {},
 			max : 5,
 			half : true,
 			fieldName : 'rating',
@@ -25,6 +26,7 @@
 		{
 			var star = $('<i/>').addClass('material-icons').html(this.settings.icon+'_border').data('rating', i).appendTo(this).click(
 				function(){
+					settings.click($(this).parent(),$(this).data('rating'));
 					obj.setRating($(this).data('rating'));
 				}
 			).hover(
