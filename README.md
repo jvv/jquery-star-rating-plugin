@@ -36,6 +36,10 @@ Specific name for the hidden input field.
 
 ID attribute of the hidden input field, so you can retrieve the contents easily.
 
+    click : function(obj,count) {}
+
+Click function is response function
+
 # Override Styles
 
 Change the fill color by overriding the "selected" class in your css.
